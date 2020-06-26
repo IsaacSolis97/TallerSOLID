@@ -11,30 +11,15 @@ package Adicionales;
  */
 public abstract class Aderezo {
     String nombre;
-    public abstract void setNombre(String nombre);
+    public Aderezo(){
+        this.nombre = "";
+    }
     
     @Override
     public String toString(){
         return this.nombre.toUpperCase();
     }
+    public abstract void setNombre(String nombre);
 }
-class Malvaviscos extends Aderezo{
 
-    @Override
-    public void setNombre(String nombre) {
-        super.nombre = nombre;
-    }
-}
-class Frutilla extends Aderezo{
 
-    @Override
-    public void setNombre(String nombre) {
-        super.nombre = nombre;
-    }
-}
-class Crema extends Aderezo {
-    @Override
-    public  void setNombre(String nombre){
-       super.nombre = nombre;
-    }
-}
