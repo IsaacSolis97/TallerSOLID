@@ -17,14 +17,6 @@ public class Postre {
     protected double precioParcial;
     protected ArrayList<Aderezo> aderezos;
     
-    public double calcularPrecioFinal(){
-        double precioFinal;
-        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
-        return precioFinal;
-    }
-    public String showPrecioFinal(){
-        return "Precio Final: $ " + calcularPrecioFinal();
-    }
 
     public Postre(String sabor) {
         aderezos= new ArrayList<>();
