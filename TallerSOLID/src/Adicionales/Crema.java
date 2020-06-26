@@ -9,9 +9,15 @@ package Adicionales;
  *
  * @author alexa
  */
-class Crema extends Aderezo {
-    @Override
-    public  void setNombre(String nombre){
-       super.nombre = nombre;
-    }
+public class Crema extends Aderezo {
+
+        public Crema() {
+            super();
+            this.setNombre();
+        }
+
+        @Override
+        public  void setNombre(){
+           super.nombre = "Crema";
+        }
 }

@@ -5,9 +5,10 @@
  */
 package Leche;
 
-import Postres.*;
-
-public abstract class LecheEntera {
+/**
+ *
+ * @author alexa
+ */
+public interface Leche {
     public abstract void usarHelado();
-    public abstract void usarPastel();
 }

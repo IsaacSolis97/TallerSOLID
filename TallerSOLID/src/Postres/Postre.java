@@ -10,25 +10,29 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Administrator
+ * @author alexa
  */
 public class Postre {
-    protected String sabor;
-    protected double precioParcial;
-    protected ArrayList<Aderezo> aderezos;
+    private String sabor;
+    private double precioParcial;
+    private ArrayList<Aderezo> aderezos;
     
-
-    public Postre(String sabor) {
+    public Postre(String sabor){
         aderezos= new ArrayList<>();
-        this.sabor = sabor;
+        this.sabor=sabor;
+    }
+    public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
+    }
+
+    public ArrayList<Aderezo> getAderezos() {
+        return aderezos;
     }
 
     public String getSabor() {
         return sabor;
-    }
-
-    public void setSabor(String sabor) {
-        this.sabor = sabor;
     }
 
     public double getPrecioParcial() {
@@ -38,25 +42,17 @@ public class Postre {
     public void setPrecioParcial(double precioParcial) {
         this.precioParcial = precioParcial;
     }
-
-    public ArrayList<Aderezo> getAderezos() {
-        return aderezos;
-    }
-
-    public void addAderezo(Aderezo ad){
-        aderezos.add(ad);
+    
+      
+    public String showPrecioFinal(){
+        return "Precio Final: $ " + calcularPrecioFinal();
     }
     
-    public void removeAderezo(Aderezo ad){
-        aderezos.remove(ad);
+    public void addAderezos(Aderezo aderezo){
+        this.aderezos.add(aderezo);
     }
     
-    
-    @Override
-    public String toString() {
-        return "Postre{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
+    public void removeAderezos(Aderezo aderezo){
+        this.aderezos.remove(aderezo);
     }
-
-    
-    
 }

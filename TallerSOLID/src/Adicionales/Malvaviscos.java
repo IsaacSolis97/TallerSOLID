@@ -9,10 +9,15 @@ package Adicionales;
  *
  * @author alexa
  */
-class Malvaviscos extends Aderezo{
+public class Malvaviscos extends Aderezo {
 
-    @Override
-    public void setNombre(String nombre) {
-        super.nombre = nombre;
-    }
+        public Malvaviscos() {
+            super();
+            this.setNombre();
+        }
+ 
+        @Override
+        public  void setNombre(){
+           super.nombre = "Malvaviscos";
+        }
 }

@@ -9,10 +9,15 @@ package Adicionales;
  *
  * @author alexa
  */
-class Frutilla extends Aderezo{
+public class Frutilla extends Aderezo {
 
-    @Override
-    public void setNombre(String nombre) {
-        super.nombre = nombre;
-    }
+        public Frutilla() {
+            super();
+            this.setNombre();
+        }
+ 
+        @Override
+        public  void setNombre(){
+           super.nombre = "Frutilla";
+        }
 }

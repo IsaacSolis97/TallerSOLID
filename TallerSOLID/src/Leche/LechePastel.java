@@ -7,13 +7,8 @@ package Leche;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author alexa
  */
-public class LecheDeslactosada  implements Leche {
-    
-    @Override
-    public void usarHelado() {
-        System.out.println("Usando leche deslactosada");
-    }
-        
+public interface LechePastel {
+        public abstract void usarPastel();
 }

@@ -13,17 +13,14 @@ import Adicionales.Aderezo;
  * @author Pedro Mendoza
  */
 public class Helado extends Postre{
-    
-    public Helado(String sabor){
+
+    public Helado(String sabor) {
         super(sabor);
-        super.precioParcial = 7.85;
+        super.setPrecioParcial(7.85);
     }
     
-    @Override
+     @Override
     public String toString() {
-        return "Helado{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
+        return "Helado{" + "sabor=" + super.getSabor() + ", precioParcial=" + super.getPrecioParcial() + ", aderezos=" + super.getAderezos() + '}';
     }
-    
-    
-    
 }
